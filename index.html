@@ -34,11 +34,21 @@
                 <div class="col-sm-8">
                     <div class="row">
                         <div class="col-sm-6">
-                            <p>Lorem ipsum dolor...</p>
-                            <button data-ng-click="clickHandler()">Kliknij mnie!</button>
+                            <p data-ng-class="{'text-center': center, 'text-danger': error}" data-ng-style="styleDemo()">
+                                Lorem ipsum dolor...
+                            </p>
+                            <div><label><input type="checkbox" data-ng-model="center">Text wyśrodkowany</label></div>
+                            <div><label><input type="checkbox" data-ng-model="error">Text ostrzegawnczy</label></div>
+                            <div><label><input type="checkbox" data-ng-model="styler">ng-style</label></div>
+                            <div><button data-ng-click="clickHandler()">Kliknij mnie!</button></div>
                             <div data-ng-if="isHidden">
                                 Kliknij przycisk powyżej aby przełączać widoczność.
                             </div>
+                            <ul>
+                                <li data-ng-repeat="contact in contacts">
+                                    {{contact.name}}
+                                </li>
+                            </ul>
                         </div>
                         <div class="col-sm-6">
                             <p>Class aptent taciti...</p>
