@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl" data-ng-app='demo' data-ng-controller="Application">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <script type="text/javascript" src="assets/js/jquery-3.5.1.min.js"></script>
+        <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="assets/js/angular.min.js"></script>
+        <script type="text/javascript" src="assets/js/controller.js"></script>
+        <title></title>
+    </head>
+    <body>
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-toggle">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Menedżer kontaktów</a>
+            </div>
+            <div class="collapse navbar-collapse" id="nav-toggle">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/">Przeglądaj</a></li>
+                    <li class="active"><a href="/add">Dodaj kontakt</a></li>
+                </ul>
+                <form class="navbar-form navbar-right" role="search">
+                    <input type="text" class="form-control" placeholder="Szukaj">
+                </form>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p>Lorem ipsum dolor...</p>
+                            <button data-ng-click="clickHandler()">Kliknij mnie!</button>
+                            <div data-ng-hide="isHidden">
+                                Kliknij przycisk powyżej aby przełączać widoczność.
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <p>Class aptent taciti...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    To jest pasek boczny.
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
