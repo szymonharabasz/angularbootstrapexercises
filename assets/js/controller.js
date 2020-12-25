@@ -1,4 +1,4 @@
-angular.module('demo',[]).controller('Application', function Application($scope) {
+angular.module('ContactManager',[]).controller('Application', function Application($scope) {
     $scope.clickHandler = function() {
         $scope.isHidden = !$scope.isHidden;g
     }
@@ -22,5 +22,10 @@ angular.module('demo',[]).controller('Application', function Application($scope)
             background: 'red',
             fontWeight: 'bold'
         };
+    };
+})
+.filter('truncate', function() {
+    return function(input, limit) {
+        return (input.length > limit) ? input.substr(0, limit)+'...' : input;
     };
 });
