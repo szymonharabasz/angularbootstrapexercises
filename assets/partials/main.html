@@ -1,0 +1,26 @@
+<div class="page-header">
+    <h1>Wszystkie kontakty</h1>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Imię i nazwisko</th>
+                    <th>Adres e-mail</th>
+                    <th>Numer telefonu</th>
+                    <th>Operacje</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-ng-repeat="contact in contacts | filter:search">
+                    <td>{{contact.name}}</td>
+                    <td>{{contact.email}}</td>
+                    <td>{{contact.phone}}</td>
+                    <td>
+                        <a href="/contact/{{$index}}" class="btn btn-info btn-xs">Wyświetl</a>
+                        <button class="btn btn-danger btn-xs" data-ng-click="delete($index)">Usuń</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

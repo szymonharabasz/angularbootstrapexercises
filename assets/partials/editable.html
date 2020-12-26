@@ -1,0 +1,17 @@
+<div data-ng-hide="editor.showing">
+    <span data-ng-bind-html="value | paragraph"></span>
+    <button class="btn btn-default btn-xs" data-ng-click="toggleEditor()">
+        Edytuj
+    </button>
+</div>
+<div data-ng-show="editor.showing">
+    <div data-ng-if="field == 'textarea'">
+        <textarea data-ng-model="editor.value" class="form-control"></textarea>
+    </div>
+    <div data-ng-if="field != 'textarea'">
+        <input type="{{field}}" data-ng-model="editor.value" class="form-control">
+    </div>
+    <hr>
+    <button class="btn btn-success btn-xs" data-ng-click="save()">Zapisz</button>
+    <button class="btn btn-default btn-xs" data-ng-click="toggleEditor()">Anuluj</button>
+</div>
